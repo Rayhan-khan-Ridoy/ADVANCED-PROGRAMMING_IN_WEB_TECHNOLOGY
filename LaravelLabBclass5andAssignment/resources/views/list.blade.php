@@ -23,7 +23,8 @@
             <td>{{$s->hobbies}}</td>
             <td>{{$s->created_at}}</td>
             <td>{{$s->updated_at}}</td>
-            <td> <button class="btn btn-success"><a href="{{route('edit', ['id' => $s->id ] )}}">edit</button>
+            <td> <!--  <button class="btn btn-success"><a href="{{route('edit', ['id' => encrypt($s->id) ] )}}">edit</button>  -->
+                 <button class="btn btn-success"><a href="{{route('edit', ['id' => $s->id ] )}}">edit</button>
                  <button class="btn btn-danger"><a href="{{route('delete', ['id' => $s->id])  }}">Delete</button></td>
         </tr>
     @endforeach

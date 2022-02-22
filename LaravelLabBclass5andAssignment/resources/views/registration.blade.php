@@ -4,6 +4,7 @@
 {{csrf_field()}}
 <p>
   <table border="1" align="center">
+
     <tr>
         <th></th>
         <th></th>
@@ -45,7 +46,8 @@
         <td>
           <span>Gender </span>
         </td>
-        <td> :<input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female
+        <td> :<input type="radio" name="gender"  value="Male" <?php if(old('gender')=='Male'){echo 'checked';} ?> >Male
+          <input type="radio" name="gender"  value="Female" <?php if(old('gender')=='Female'){echo 'checked';} ?> >Female
           @error('gender')
           <span class="btn btn-danger"> {{$message}}</span>
           @enderror
@@ -55,7 +57,10 @@
         <td>
           <span>Hobbies </span>
         </td>
-        <td>:<input type="checkbox" value="Movies" name="hobbies[]">Movies <input type="checkbox" value="Music" name="hobbies[]">Music <input type="checkbox"value="Games" name="hobbies[]">Games
+        <td>
+          :<input type="checkbox" value="Movies" name="hobbies[]"  <?php if( (is_array(old('hobbies')) && in_array('Movies', old('hobbies'))) ) { echo ' checked';} ?> >Movies
+          <input type="checkbox" value="Music" name="hobbies[]"  <?php if( (is_array(old('hobbies')) && in_array('Music', old('hobbies'))) ) { echo ' checked';} ?> >Music
+          <input type="checkbox"value="Games" name="hobbies[]"  <?php if( (is_array(old('hobbies')) && in_array('Games', old('hobbies'))) ) { echo ' checked';} ?>>Games
           @error('hobbies')
           <span class="btn btn-danger"> {{$message}}</span>
           @enderror

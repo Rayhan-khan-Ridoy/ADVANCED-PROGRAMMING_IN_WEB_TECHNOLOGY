@@ -94,7 +94,7 @@ public function AfterRegis(Request $req){
   $req->validate(
               [
                   'name'=>'required|regex:/^[A-Z , a-z]+$/|',
-                  'id'=>'required|regex:/^[0-9-]+$/|max:10|min:10|unique:students,s_id',
+                  'id'=>'required|regex:/^[0-9]+$/|max:10|min:10|unique:students,s_id',
                   'cgpa'=>'required|numeric|between:0.0,4.00',
                   'gender'=>'required',
                   'hobbies'=>'required'
@@ -132,9 +132,10 @@ return view('AfterRegis')
 }
 
 public function edit(Request $req){
-
+   //     $students = Student::where('id',decrypt($req->id))->first();
           $students = Student::where('id',$req->id)->first();
           return view('edit')->with('students',$students);
+
 
 }
 

@@ -24,7 +24,7 @@
                 <li>Good Communication Skills, Presentation Skills, attitude towards leadership, authorisation and delegation, conflict resolution and negotiation and a very good team worker.</li></ul>
             </p>
             <h3>Professional Experience</h3>
-            <a href="/pe">Go to the page </a>
+            <a id="link" href="/pe">Go to the page </a>
 
             <h3>Educational Qualifications</h3>
             <table>
@@ -66,10 +66,10 @@
                 </tr>
             </table>
             <h3>Independent Courses</h3>
-            <a href="/ic">Go to the page </a>
+            <a id="link" href="/ic">Go to the page </a>
 
             <h3>Technical Skills</h3>
-            <a href="/ts">Go to the page </a>
+            <a id="link" href="/ts">Go to the page </a>
 
             <h3>Certifications / Awards:</h3>
             <p>
