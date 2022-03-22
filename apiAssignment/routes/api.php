@@ -20,14 +20,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//------------student api crud-----
 Route::get('/viewAllStudents',[studentController::class,'viewAllStudents'])->name('viewAllStudents');
 Route::post('/addStudent',[studentController::class,'addStudent'])->name('addStudent');
 Route::put('/editStudent/{id}',[studentController::class,'editStudent'])->name('editStudent');
 Route::delete('/deletetStudent/{id}',[studentController::class,'deletetStudent'])->name('deletetStudent');
 
+
+//------------dept api crud-----
 Route::get('/viewAlldepts',[deptController::class,'viewAlldepts'])->name('viewAlldepts');
 Route::post('/addDept',[deptController::class,'addDept'])->name('addDept');
 Route::put('/editDept/{id}',[deptController::class,'editDept'])->name('editDept');
 Route::delete('/deleteDept/{id}',[deptController::class,'deleteDept'])->name('deleteDept');
 
+
+//------------/dept/St/Details/-----
 Route::get('/dept/St/Details/{id}',[deptController::class,'deptStudentDetails'])->name('deptStudentDetails');
